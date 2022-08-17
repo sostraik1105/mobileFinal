@@ -44,7 +44,7 @@ class LoginFragment : Fragment() {
             } else {
                 signIn(email, password)
                 Navigation.findNavController(root).navigate(R.id.navigation_profile)
-            }
+            }//ce267ce
 
         })*/
         binding.recover.setOnClickListener(View.OnClickListener {
