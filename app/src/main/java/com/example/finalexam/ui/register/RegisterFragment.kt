@@ -1,4 +1,4 @@
-package com.example.finalexam.ui.login
+package com.example.finalexam.ui.register
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -9,13 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.navigation.Navigation
 import com.example.finalexam.R
-import com.example.finalexam.databinding.FragmentLoginBinding
+import com.example.finalexam.databinding.FragmentRegisterBinding
 
-class LoginFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
-    private var _binding: FragmentLoginBinding? = null
+    private var _binding: FragmentRegisterBinding? = null
+    //private val firebaseAuth = FirebaseAuth.getInstance()
+    //private val db = FirebaseFirestore.getInstance()
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -25,55 +26,46 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val loginViewModel =
-            ViewModelProvider(this)[LoginViewModel::class.java]
+        val registerViewModel =
+            ViewModelProvider(this)[RegisterViewModel::class.java]
 
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val editTextName = binding.editTextName
+        val editTextLastname = binding.editTextLastname
+        val editTextUsername = binding.editTextUsername
         val editTextEmail = binding.editTextEmail
         val editTextPassword = binding.editTextPassword
         val textView: TextView = binding.textLogin
 
         // firebase auth instance
-        /*binding.login.setOnClickListener(View.OnClickListener {
+        binding.register.setOnClickListener(View.OnClickListener {
+            val name = editTextName.text.toString()
+            val lastname = editTextLastname.text.toString()
+            val username = editTextUsername.text.toString()
             val email = editTextEmail.text.toString()
             val password = editTextPassword.text.toString()
             if(email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(context, "Please enter email/password", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             } else {
-                signIn(email, password)
-                Navigation.findNavController(root).navigate(R.id.navigation_profile)
-            }//ce267ce
-
-        })*/
-        binding.recover.setOnClickListener(View.OnClickListener {
-            Navigation.findNavController(root).navigate(R.id.navigation_recover)
-
-        })
-
-        binding.register.setOnClickListener(View.OnClickListener {
-            Navigation.findNavController(root).navigate(R.id.navigation_register)
-
-        })
-        binding.login.setOnClickListener(View.OnClickListener {
-            Navigation.findNavController(root).navigate(R.id.storageActivity)
-
+                //register(name, lastname, username, email, password)
+            }
         })
 
 
 
-        loginViewModel.text.observe(viewLifecycleOwner) {
+        registerViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
     }
-/*
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
+/*
     private fun signIn(email: String, password: String) {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
@@ -94,8 +86,11 @@ class LoginFragment : Fragment() {
         firebaseAuth.signOut()
     }
 
-    private fun signUp(email: String, password: String) {
+    private fun register(name: String,lastname: String,username: String,email: String, password: String) {
         val user = hashMapOf(
+            "name" to name,
+            "lastname" to lastname,
+            "username" to username,
             "email" to email,
             "password" to password
         )
@@ -110,6 +105,17 @@ class LoginFragment : Fragment() {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(context, "Register failed.", Toast.LENGTH_SHORT).show()
                 }
+            }
+        saveUser(user)
+    }
+
+    private fun saveUser(user: HashMap<String, String>) {
+        db.collection("users_registration").add(user)
+            .addOnSuccessListener { documentReference ->
+                Toast.makeText(context, "User saved successfully ${documentReference.id}", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 

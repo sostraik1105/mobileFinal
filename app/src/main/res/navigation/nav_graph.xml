@@ -9,10 +9,34 @@
         android:id="@+id/navigation_login"
         android:name="com.example.finalexam.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_recover2"
+            app:destination="@id/navigation_recover" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_register"
+            app:destination="@id/navigation_register" />
+        <action
+            android:id="@+id/action_navigation_login_to_storageActivity"
+            app:destination="@id/storageActivity" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_recover"
         android:name="com.example.finalexam.ui.recover.RecoverPassFragment"
         android:label="fragment_recover_pass"
         tools:layout="@layout/fragment_recover_pass" />
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.example.finalexam.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+    <activity
+        android:id="@+id/storageActivity"
+        android:name="com.example.finalexam.ui.StorageActivity"
+        android:label="activity_storage"
+        tools:layout="@layout/activity_storage" />
 </navigation>
