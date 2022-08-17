@@ -19,30 +19,5 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        //val navView: BottomNavigationView = binding.navView
-
-        //navController = findNavController(R.id.nav_host_fragment_activity_login)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        /*val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_login, R.id.navigation_register
-            )
-        )
-        //setupActionBarWithNavController(navController, appBarConfiguration)
-        //navView.setupWithNavController(navController)
-
-        // hiding bottom bar
-        navController.addOnDestinationChangedListener { _, nd: NavDestination, _ ->
-            // the IDs of fragments as defined in the `navigation_graph`
-            if (nd.id == R.id.navigation_home || nd.id == R.id.navigation_login
-                || nd.id == R.id.navigation_register
-            ) {
-                navView.visibility = View.VISIBLE
-            } else {
-                navView.visibility = View.GONE
-            }
-        }*/
     }
 }
