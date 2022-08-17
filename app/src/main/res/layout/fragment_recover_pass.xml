@@ -1,64 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/fragment_horizontal_margin"
-    android:paddingTop="@dimen/fragment_vertical_margin"
-    android:paddingRight="@dimen/fragment_horizontal_margin"
-    android:paddingBottom="@dimen/fragment_vertical_margin"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".ui.recover.RecoverPassFragment"
+    android:padding="30dp">
 
-    <TextView
-        android:id="@+id/text_recover"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/edit_text_password"
-        android:hint="Enter old Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_recover"
-        android:inputType="textPassword"
-        />
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_text_new_password"
-        android:hint="Enter new Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_password"
-        android:inputType="textPassword"
-        />
-    <Button
-        android:id="@+id/recover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:enabled="true"
-        android:text="Recover Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_new_password"
-        app:layout_constraintVertical_bias="0.2" />
+        android:orientation="vertical">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/lock_solid_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recover_password"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</ScrollView>
