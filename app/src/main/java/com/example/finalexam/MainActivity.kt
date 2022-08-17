@@ -10,12 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
+
         thread {
             Thread.sleep(4500);
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }*/
+        }
     }
 }
