@@ -34,16 +34,17 @@
         app:layout_constraintTop_toBottomOf="@+id/text_recover"
         android:inputType="textPassword"
         />
+
     <EditText
+        android:id="@+id/edit_text_new_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_text_new_password"
         android:hint="Enter new Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_password"
-        android:inputType="textPassword"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_password" />
     <Button
         android:id="@+id/recover"
         android:layout_width="wrap_content"
