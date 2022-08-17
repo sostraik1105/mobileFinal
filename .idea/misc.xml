@@ -3,20 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/activity_main.xml" value="0.15462962962962962" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_list.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_login.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_product_list.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_recover_pass.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_register.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/list_item.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
         <entry key="..\:/Users/Hogar/Desktop/mobileFinal/app/src/main/res/layout/activity_main.xml" value="0.14990942028985507" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable-v24/ic_lock.xml" value="0.1915" />
+        <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/arrow_left.xml" value="0.136" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/card_product.xml" value="0.1345" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/close.xml" value="0.201" />
+        <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/ic_lock.xml" value="0.136" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/ic_mail.xml" value="0.1205" />
+        <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/ic_map_pin.xml" value="0.136" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/ic_search.xml" value="0.1205" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/ic_shopping_bag.xml" value="0.1345" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/layout/activity_login.xml" value="0.33" />
@@ -32,9 +26,6 @@
         <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/drawable/border_image.xml" value="0.2985" />
         <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/drawable/ic_lock.xml" value="0.2985" />
         <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/drawable/ic_mail.xml" value="0.155" />
-        <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/layout/card_product.xml" value="0.5" />
         <entry key="..\:/Users/sostr/AndroidStudioProjects/finalExam/app/src/main/res/menu/main_menu.xml" value="0.19427083333333334" />
       </map>
     </option>
