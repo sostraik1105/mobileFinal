@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
+        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/activity_main.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/activity_storage.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_list.xml" value="0.2" />
+
         <entry key="..\:/Users/Hogar/Desktop/mobileFinal/app/src/main/res/layout/activity_main.xml" value="0.14990942028985507" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable-v24/ic_lock.xml" value="0.1915" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/drawable/arrow_left.xml" value="0.136" />
@@ -19,6 +25,7 @@
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/Hogar/Documents/mobileFinal/app/src/main/res/layout/fragment_recover_pass.xml" value="0.24230072463768115" />
         <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/activity_main.xml" value="0.15462962962962962" />
+
         <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/layout/fragment_recover_pass.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/mobileFinal/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
