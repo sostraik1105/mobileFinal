@@ -35,18 +35,18 @@ class LoginFragment : Fragment() {
         val textView: TextView = binding.textLogin
 
         // firebase auth instance
-        /*binding.login.setOnClickListener(View.OnClickListener {
+        binding.login.setOnClickListener(View.OnClickListener {
             val email = editTextEmail.text.toString()
             val password = editTextPassword.text.toString()
             if(email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(context, "Please enter email/password", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             } else {
-                signIn(email, password)
-                Navigation.findNavController(root).navigate(R.id.navigation_profile)
+                //signIn(email, password)
+                Navigation.findNavController(root).navigate(R.id.navigation_storage)
             }//ce267ce
 
-        })*/
+        })
         binding.recover.setOnClickListener(View.OnClickListener {
             Navigation.findNavController(root).navigate(R.id.navigation_recover)
 
@@ -54,10 +54,6 @@ class LoginFragment : Fragment() {
 
         binding.register.setOnClickListener(View.OnClickListener {
             Navigation.findNavController(root).navigate(R.id.navigation_register)
-
-        })
-        binding.login.setOnClickListener(View.OnClickListener {
-            Navigation.findNavController(root).navigate(R.id.storageActivity)
 
         })
 

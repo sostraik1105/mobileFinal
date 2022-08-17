@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalexam.R
-import com.example.finalexam.ui.adapter.ListAdapter
-import com.example.finalexam.ui.products.models.ProductModel
+import com.example.finalexam.adapter.ListAdapter
+import com.example.finalexam.api.ApiService
+import com.example.finalexam.api.ServiceGenerator
+import com.example.finalexam.models.ProductModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -43,28 +46,34 @@ class ProductListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_product_list, container, false)
+
         val recyclerViewList = view.findViewById<RecyclerView>(R.id.recycler_view_list)
-        recyclerViewList.layoutManager = LinearLayoutManager(context)
+
+        recyclerViewList.layoutManager = GridLayoutManager(context, 2)
+
         recyclerViewList.setHasFixedSize(true)
-        //getProductData { products : List<ProductModel> -> recyclerViewList.adapter = ListAdapter(products) }
+
+        getProductData { products : ProductModel -> recyclerViewList.adapter = ListAdapter(products.products) }
 
 
         return view
-    }/*
-    private fun getProductData(callback: (List<ProductModel> ) -> Unit){
+    }
+
+    private fun getProductData(callback: (ProductModel) -> Unit){
         val serviceGenerator = ServiceGenerator.buildService(ApiService::class.java)
         val call = serviceGenerator.getProducts()
-        call.enqueue(object : Callback<List<ListModel>> {
-            override fun onResponse(call: Call<List<ListModel>>, response: Response<List<ListModel>>) {
+
+        call.enqueue(object : Callback<ProductModel> {
+            override fun onResponse(call: Call<ProductModel>, response: Response<ProductModel>) {
                 val products = response.body()
                 return callback(products!!)
             }
 
-            override fun onFailure(call: Call<List<ListModel>>, t: Throwable) {
-                Log.d("ListFragment", "Error: ${t.message}")
+            override fun onFailure(call: Call<ProductModel>, t: Throwable) {
+                Log.d("ProductListFragment", "Error: ${t.message}")
             }
         })
-    }*/
+    }
 
     companion object {
         /**

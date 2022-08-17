@@ -7,11 +7,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ServiceGenerator {
     private val client = OkHttpClient
         .Builder()
-        .addInterceptor(HeaderInterceptor())
         .build()
 
     public val retrofit = Retrofit.Builder()
-        .baseUrl("https://ecommerce-puchuri.herokuapp.com/api/v1")
+        .baseUrl("https://ecommerce-puchuri.herokuapp.com/api/v1/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()

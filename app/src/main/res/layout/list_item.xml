@@ -16,7 +16,7 @@
         android:layout_marginStart="52dp"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/profile_image_center"
+        android:src="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
