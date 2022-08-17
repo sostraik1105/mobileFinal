@@ -17,5 +17,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }*/
+
+        System.console().writer()
     }
 }
