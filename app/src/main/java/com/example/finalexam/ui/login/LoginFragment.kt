@@ -56,6 +56,10 @@ class LoginFragment : Fragment() {
             Navigation.findNavController(root).navigate(R.id.navigation_register)
 
         })
+        binding.login.setOnClickListener(View.OnClickListener {
+            Navigation.findNavController(root).navigate(R.id.storageActivity)
+
+        })
 
 
 
